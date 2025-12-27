@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Dora ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:radial-gradient(circle,#1b1b2f,#0f0f1a);
+  color:#fff;
+  overflow-x:hidden;
+  text-align:center;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.hidden{display:none}
+
+h1{font-family:'Pacifico',cursive;color:#ff77a9;font-size:2.4rem}
+
+p{margin-top:10px}
+
+input{
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  outline:none;
+  text-align:center;
+  margin-top:15px;
+}
+
+button{
+  margin-top:25px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d6d;
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+.message{
+  max-width:900px;
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:20px;
+  line-height:1.8;
+}
+
+.message span{color:#ff9ecf;font-weight:600}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:20px;
+}
+
+/* Hearts */
+.heart{
+  position:fixed;
+  color:#ff4d6d;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  0%{transform:translateY(-10vh)}
+  100%{transform:translateY(110vh)}
+}
+
+/* Cake */
+.cake{
+  width:200px;
+  height:120px;
+  background:#ff9ecf;
+  border-radius:0 0 20px 20px;
+  margin-top:30px;
+  position:relative;
+}
+
+.candle{
+  width:10px;
+  height:40px;
+  background:#fff;
+  position:absolute;
+  top:-40px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.flame{
+  width:14px;
+  height:14px;
+  background:orange;
+  border-radius:50%;
+  position:absolute;
+  top:-14px;
+  left:-2px;
+  animation:flicker .3s infinite;
+}
+
+@keyframes flicker{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop hidden>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- PASSWORD -->
+<section id="lock">
+  <h1>🔒 Secret Surprise</h1>
+  <p>Only Dora can open 💖</p>
+  <input type="password" id="pass" placeholder="Enter Secret name">
+  <button onclick="unlock()">Open 🎁</button>
+  <button onclick="toggleMusic()">🔊 Music</button>
+</section>
+
+
+<!-- COUNTDOWN -->
+<section id="countdown" class="hidden">
+  <h1 id="countTitle">Countdown for My Dora 🎂</h1>
+  <p id="timer"></p>
+  <button onclick="skipCountdown()">Skip 🎁</button>
+</section>
+
+<!-- MAIN -->
+<section id="main" class="hidden">
+  <h1>Happy Birthday my Doraa! May your special day be as wonderful as you are, filled with joy, cake, and everything that makes you smile. 🎉
+  </h1>
+  <p>Baccha • Cutie Pie • Chikku • Baby • Bonita</p>
+  <button onclick="showMsg()">Tap for Surprise 💝</button>
+</section>
+
+<!-- MESSAGE -->
+<section id="msg" class="hidden">
+  <div class="message">
+    <p><span>Dear  Doraa…</span> <span>Your All Dreams Come True Baccha  </span> <span>sorry meri anger 😡 hurt krne ke liye😭😭</span> </p>
+    <p>Tum meri <span>healer</span> ho 💗 meri anxiety me <span>help</span> , meri pagal baate sab <span>tum handle karti ho</span> </p>
+    <p>Tumhe <span>preshan krne me maaja</span> atta hai <span>cutie</span>  ko or waise me kesi se </span>darta</span> to nhi hu but <span>i don't know kyu darta hu me aapse</span> 😭</p>
+    <p><span>Baccha</span> aap jab <Span>call krte hoo</Span> naa jabb jo pehla word😭 <span>hello</span> rehta hai jo inta <span>pyara lagta hai baccho</span> jesi <span>cutie se voice😭</span> sunte hi main kho jata hu😭</p>
+    <p>Tum meri <span>best friend</span> ho 🥺 hamesha mere saath rehna.</p>
+    <p><span>Bahut miss karta hu…</span> mujhe <span>hug<span> karna hai aur tumhe <span>soooo much TQ</span> bolna  😭</p>
+    <p>Dora jald milenge baccha 👉👈 thank you meri life me hone ke liye 🌹</p>
+    <p><span>I Know aap jante ho ki me kitna bada gadha hu</span> me gusse me kuch bhi boll deta hu<span> but regret baad me hota hai😭</span> Mujhe pata hai ki<span> me samjhta nhi hu itna but normal</span> he samjhta hu😭😭<span> mujhe nhi ptta kese handle</span> krte hai  but haa <span>me hassa skta hu agar aap gussa/sad ho to 😭 </span></p>
+    <p><span> meri wajah se agar aap sad emotional</span> hote ho to aapse <span>jada bura to mujhe lagta hai</span> or mujhe ptta nhi me kyu  <span>uss he baat ko bolta rhta </span> hu agar me usse topic ko <span> leave krdu or baat krta rhu</span> apse to aap khud normal<span> ho skte ho but fer bhi vhi krta hu me😭😭</span></p>
+    <p>Today our <span>145 days friendship<span>/ <span>4 months 23 days</span> / <span>20 weeks 5 days</span> / <span>3,480 hours</span> / <span>208,800 minutes</span> / <span>12,528,000 seconds</span>😭😭<p></p>
+  </div>
+  <button onclick="showGallery()">Baby Girl Photo 📸</button>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="hidden">
+  <h1>Only For you cutie pie💕</h1>
+  <div class="gallery">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+  </div>
+  <div class="cake">
+    <div class="candle"><div class="flame"></div></div>
+  </div>
+</section>
+
+<script>
+  // SETTINGS
+  const herName = "Doraa";
+  const secretPassword = "18";
+  const birthdayDate = "2026-01-05";
+
+
+  function unlock(){
+    // your existing unlock code
+  }
+
+  function skipCountdown(){
+    // your existing skip code
+  }
+
+  function showMsg(){
+    // your existing code
+  }
+
+  function showGallery(){
+    // your existing code
+  }
+
+  // 🔊 ADD THIS AT THE END
+  function toggleMusic(){
+    const music = document.getElementById("bgMusic");
+    if(music.paused){
+      music.play();
+    }else{
+      music.pause();
+    }
+  }
+
+
+// PASSWORD
+function unlock(){
+  if(pass.value.toLowerCase() === secretPassword){
+    lock.classList.add("hidden");
+    countdown.classList.remove("hidden");
+  }else{
+    alert("KON??? LAGVU POLICE KO PHONE AGAR ABB GALAT TOO?? PHONE LAG JYEGA 🥺");
+  }
+}
+
+// COUNTDOWN
+const birthday = new Date(birthdayDate+" 24:00:00").getTime();
+
+setInterval(()=>{
+  let now = new Date().getTime();
+  let d = birthday - now;
+
+  if(d <= 0){
+    skipCountdown();
+  }else{
+    let h = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+    let m = Math.floor((d%(1000*60*60))/(1000*60));
+    let s = Math.floor((d%(1000*60))/1000);
+    timer.innerHTML = h+"h "+m+"m "+s+"s";
+  }
+},1000);
+
+// SKIP BUTTON
+function skipCountdown(){
+  countdown.classList.add("hidden");
+  main.classList.remove("hidden");
+}
+
+// NAVIGATION
+function showMsg(){
+  main.classList.add("hidden");
+  msg.classList.remove("hidden");
+}
+function showGallery(){
+  msg.classList.add("hidden");
+  gallery.classList.remove("hidden");
+}
+
+// HEARTS
+setInterval(()=>{
+  let h = document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
